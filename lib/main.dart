@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/widgets/titulo_secao.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,22 +16,27 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text('Widget de conteudo')),
         body: Column(
-          children: [
-            Text('textos', style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),),
-            Text('texto estilizado', style: TextStyle(
+
+          children: [TituloSecao(titulo: 'textos'),
+            Text('eu gosto de ir para a praia', style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),),
-            Text('texto com estilo padrao', style: TextStyle(
+            Text('agora to indo dormir', style: TextStyle(
               fontSize: 18,
             ),),
 
             Divider(),
-            ]
+            TituloSecao(titulo: 'imagem'),
+            Image.network(
+              'https://img.olx.com.br/images/49/496524015588365.jpg',
+              height: 300,
+              width: 300,
+            ),
+
+            Divider(),
+            TituloSecao(titulo: 'icone'),
+          ],
         ),
       ),
     );
