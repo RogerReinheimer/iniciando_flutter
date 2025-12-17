@@ -16,13 +16,21 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text('Widget de conteudo')),
         body: Column(
           children: [
-            Text('texto estilizado', style: TextStyle(
+            Text('textos', style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.blue,
-              ),
-            ),
-          ],
+              ),),
+            Text('texto estilizado', style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),),
+            Text('texto com estilo padrao', style: TextStyle(
+              fontSize: 18,
+            ),),
+
+            Divider(),
+            ]
         ),
       ),
     );
